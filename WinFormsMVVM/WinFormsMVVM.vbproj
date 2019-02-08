@@ -50,6 +50,7 @@
     <Reference Include="DevExpress.XtraEditors.v18.2" />
     <Reference Include="DevExpress.Printing.v18.2.Core" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -72,21 +73,18 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\MainView.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Views\MainView.Designer.vb">
-      <DependentUpon>MainView.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\MainViewModel.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <EmbeddedResource Include="Views\MainView.resx">
-      <DependentUpon>MainView.vb</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ViewModels\ContactsViewModel.vb" />
+    <Compile Include="Views\ContactsView.Designer.vb">
+      <DependentUpon>ContactsView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ContactsView.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
