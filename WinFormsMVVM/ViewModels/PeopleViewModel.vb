@@ -17,15 +17,15 @@ Public Class PeopleViewModel
     End Sub
 
     Protected Sub OnAddressChanged()
-        Me.RaiseCanExecuteChanged(Function(x) x.ResetAddress)
+        Me.RaiseCanExecuteChanged(Function(x) x.ResetAddress())
     End Sub
     Public Function CanResetAddress() As Boolean
-        Return _person IsNot Nothing AndAlso Not String.IsNullOrEmpty
+        Return _person IsNot Nothing AndAlso Not String.IsNullOrEmpty(Address)
     End Function
 
-    Public Function ResetAddress() As Object
-        Return Me.Address = ""
-    End Function
+    Public Sub ResetAddress()
+        Me.Address = ""
+    End Sub
 
     Public Sub Load(ByVal peopleinfo As PeopleInfo)
         Me._person = peopleinfo
