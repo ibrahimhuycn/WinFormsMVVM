@@ -73,16 +73,26 @@
     <Import Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\PeopleInfo.vb" />
+    <Compile Include="Data\PeopleList.vb" />
+    <Compile Include="Data\Person.vb" />
+    <Compile Include="ViewModels\MainViewModel.vb" />
+    <Compile Include="Views\MainView.Designer.vb">
+      <DependentUpon>MainView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainView.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
-    <Compile Include="ViewModels\ContactsViewModel.vb" />
-    <Compile Include="Views\ContactsView.Designer.vb">
-      <DependentUpon>ContactsView.vb</DependentUpon>
+    <Compile Include="ViewModels\PeopleViewModel.vb" />
+    <Compile Include="Views\PeopleView.Designer.vb">
+      <DependentUpon>PeopleView.vb</DependentUpon>
     </Compile>
-    <Compile Include="Views\ContactsView.vb">
+    <Compile Include="Views\PeopleView.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <EmbeddedResource Include="My Project\licenses.licx" />
@@ -96,6 +106,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\MainView.resx">
+      <DependentUpon>MainView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PeopleView.resx">
+      <DependentUpon>PeopleView.vb</DependentUpon>
+    </EmbeddedResource>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
