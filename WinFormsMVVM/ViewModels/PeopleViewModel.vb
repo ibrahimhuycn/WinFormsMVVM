@@ -15,6 +15,18 @@ Public Class PeopleViewModel
         Dim a = person.Item(1)
         Load(a)
     End Sub
+
+    Protected Sub OnAddressChanged()
+        Me.RaiseCanExecuteChanged(Function(x) x.ResetAddress)
+    End Sub
+    Public Function CanResetAddress() As Boolean
+        Return _person IsNot Nothing AndAlso Not String.IsNullOrEmpty
+    End Function
+
+    Public Function ResetAddress() As Object
+        Return Me.Address = ""
+    End Function
+
     Public Sub Load(ByVal peopleinfo As PeopleInfo)
         Me._person = peopleinfo
 
@@ -27,6 +39,7 @@ Public Class PeopleViewModel
     Public Overridable Property PersonName As String
     Public Overridable Property Address As String
     Public Overridable Property Mobile As Integer
+
 
 
     Public Shared Function Create() As PeopleViewModel

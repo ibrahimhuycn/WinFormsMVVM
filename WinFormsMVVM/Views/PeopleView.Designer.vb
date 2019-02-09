@@ -20,6 +20,7 @@ Partial Class PeopleView
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PeopleView))
         Me.TextEditName = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControlName = New DevExpress.XtraEditors.LabelControl()
         Me.LabelControlAddress = New DevExpress.XtraEditors.LabelControl()
@@ -27,6 +28,7 @@ Partial Class PeopleView
         Me.LabelControlMobile = New DevExpress.XtraEditors.LabelControl()
         Me.TextEditMobile = New DevExpress.XtraEditors.TextEdit()
         Me.mvvmContext1 = New DevExpress.Utils.MVVM.MVVMContext(Me.components)
+        Me.SimpleButtonDeleteAddress = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.TextEditName.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditAddress.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TextEditMobile.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -84,10 +86,22 @@ Partial Class PeopleView
         Me.mvvmContext1.ContainerControl = Me
         Me.mvvmContext1.ViewModelType = GetType(WinFormsMVVM.PeopleViewModel)
         '
+        'SimpleButtonDeleteAddress
+        '
+        Me.SimpleButtonDeleteAddress.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.SimpleButtonDeleteAddress.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter
+        Me.SimpleButtonDeleteAddress.ImageOptions.SvgImage = CType(resources.GetObject("SimpleButton1.ImageOptions.SvgImage"), DevExpress.Utils.Svg.SvgImage)
+        Me.SimpleButtonDeleteAddress.ImageOptions.SvgImageSize = New System.Drawing.Size(20, 20)
+        Me.SimpleButtonDeleteAddress.Location = New System.Drawing.Point(225, 41)
+        Me.SimpleButtonDeleteAddress.Name = "SimpleButtonDeleteAddress"
+        Me.SimpleButtonDeleteAddress.Size = New System.Drawing.Size(20, 20)
+        Me.SimpleButtonDeleteAddress.TabIndex = 6
+        '
         'PeopleView
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.Controls.Add(Me.SimpleButtonDeleteAddress)
         Me.Controls.Add(Me.LabelControlMobile)
         Me.Controls.Add(Me.TextEditMobile)
         Me.Controls.Add(Me.LabelControlAddress)
@@ -112,4 +126,5 @@ Partial Class PeopleView
     Friend WithEvents LabelControlAddress As DevExpress.XtraEditors.LabelControl
     Friend WithEvents TextEditAddress As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControlName As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents SimpleButtonDeleteAddress As DevExpress.XtraEditors.SimpleButton
 End Class
